@@ -50,8 +50,6 @@ public class Chessboard extends View {
     private boolean IsBlack = true;
     /** Check whether current game is over. */
     private boolean IsGameOver = false;
-    /** Check the winner of the game. */
-    private boolean IsBlackWinner;
     /** Check if the chessboard is full. */
     private boolean IsFull = false;
 
@@ -106,7 +104,7 @@ public class Chessboard extends View {
 
     /**
      * Draw each piece on the point.
-     * @param canvas the screen in the app.
+     * @param canvas the chessboard region in the app.
      */
     private void drawPieces(Canvas canvas) {
         for (int i = 0; i < BlackArray.size(); i++) {
@@ -171,13 +169,11 @@ public class Chessboard extends View {
         boolean whiteWin = CheckGame.checkGameWin(WhiteArray);
         if (blackWin == true) {
             IsGameOver = true;
-            IsBlackWinner = true;
             String message = "Black wins";
             Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
         }
         if (whiteWin == true) {
             IsGameOver = true;
-            IsBlackWinner = false;
             String message = "White wins";
             Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
         }
