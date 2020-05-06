@@ -18,11 +18,7 @@ public class CheckGame {
             boolean horizontalWin = checkHorizontal(x, y, points);
             boolean verticalWin = checkVertical(x, y, points);
             boolean diagonalWin = checkDiagonal(x, y, points);
-            if (horizontalWin) {
-                return true;
-            } else if (verticalWin) {
-                return true;
-            } else if (diagonalWin) {
+            if (horizontalWin || verticalWin || diagonalWin) {
                 return true;
             }
         }

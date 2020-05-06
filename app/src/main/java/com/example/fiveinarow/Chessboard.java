@@ -17,7 +17,7 @@ import java.util.ArrayList;
 /** Class build to set up the UI in game and draw out the chessboard and pieces.
  * Since I haven't learned how to use canvas in android to draw lines and use Bitmap to add
  * pictures, some of the codes below are borrowed from programming websites
- * https://github.com/codekongs/WuZiQi/blob/master/wuziqi/src/main/java/com/codekong/wuziqi/view/WuziqiPanel.java.
+ * https://github.com/codekongs/WuZiQi/blob/master/wuziqi/src/main/java/com/codekong/wuziqi/view/WuziqiPanel.java
  */
 public class Chessboard extends View {
     public Chessboard(Context context) {
@@ -127,7 +127,7 @@ public class Chessboard extends View {
      * @param x x-coordinate of the point
      * @param y y-coordinate of the point
      * @return the valid point on chessboard
-     * Cited from https://github.com/codekongs/WuZiQi/blob/master/wuziqi/src/main/java/com/codekong/wuziqi/view/WuziqiPanel.java.
+     * Cited from https://github.com/codekongs/WuZiQi/blob/master/wuziqi/src/main/java/com/codekong/wuziqi/view/WuziqiPanel.java
      */
     private Point getValidPoint(int x, int y) {
         return new Point((int) (x / LineDistance), (int) (y / LineDistance));
@@ -136,7 +136,7 @@ public class Chessboard extends View {
     /**
      * @param move The touch by user on the screen.
      * @return The piece locates at the touch position.
-     * Cited from https://github.com/codekongs/WuZiQi/blob/master/wuziqi/src/main/java/com/codekong/wuziqi/view/WuziqiPanel.jav
+     * Cited from https://github.com/codekongs/WuZiQi/blob/master/wuziqi/src/main/java/com/codekong/wuziqi/view/WuziqiPanel.java
      */
     public boolean onTouchEvent(MotionEvent move) {
         if (IsGameOver) {
